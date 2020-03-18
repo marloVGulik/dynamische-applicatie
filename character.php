@@ -16,7 +16,9 @@ if(count($result) != 1) {
 }
 ?>
 
-
+<a class="container siz-9" href="/dynamische-applicatie/">
+    <h1>BACK TO HUB</h1>
+</a>
 <div class="container siz-9">
     <img src="/dynamische-applicatie/Data/Game/Avatars/<?= $result[0]['avatar'] ?>" class="profilePicLarge" style="border-color: <?= $result[0]['color'] ?>">
     <h1><?= $result[0]['name']; ?></h1>
