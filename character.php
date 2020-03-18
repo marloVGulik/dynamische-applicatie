@@ -1,7 +1,5 @@
 <?php
 require("./Data/HTML/headerP1.html");
-echo "<title>HOME</title>";
-require("./Data/HTML/headerP2.html");
 
 
 $user = "character-bot";
@@ -12,15 +10,20 @@ $statement->execute([":inputName" => urldecode($_GET['name'])]);
 $result = $statement->fetchAll();
 
 if(count($result) != 1) {
-    echo "ERROR!";
+    echo "<h1>ERROR!</h1>";
 }
+
+
+echo "<title>" . $result[0]['name'] . "</title>";
+require("./Data/HTML/headerP2.html");
+
 ?>
 
 <a class="container siz-9" href="/dynamische-applicatie/">
     <h1>BACK TO HUB</h1>
 </a>
 <div class="container siz-9">
-    <img src="/dynamische-applicatie/Data/Game/Avatars/<?= $result[0]['avatar'] ?>" class="profilePicLarge" style="border-color: <?= $result[0]['color'] ?>">
+    <img src="/dynamische-applicatie/Data/Game/Avatars/<?= $result[0]['avatar'] ?>" class="profilePicLarge" style="border-color: <?= $result[0]['color'] ?>" alt="<?= $result[0]['avatar'] ?>">
     <h1><?= $result[0]['name']; ?></h1>
     <p><?= $result[0]['bio']; ?></p>
     <ul class="container siz-12" style="border-color: <?= $result[0]['color'] ?>">

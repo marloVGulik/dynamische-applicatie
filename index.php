@@ -13,7 +13,7 @@ $count = $statement->fetchAll();
 ?>
 
 <div class="container siz-9">
-    <h1>Alle <?= $count[0][0] ?> karakters</h1>
+    <h1>All <?= $count[0][0] ?> characters</h1>
 </div>
 <div class="container siz-9">
     <?php 
@@ -21,14 +21,13 @@ $count = $statement->fetchAll();
         foreach ($result as $character) {
             echo '<a href="character.php/?name=' . urlencode($character['name']) . '"><div class="container siz-6" style="border-color: ' . $character['color'] . '">';
             echo '<h2>' . $character['name'] . '</h2>';
-            echo '<img src="/dynamische-applicatie/Data/Game/Avatars/' . $character['avatar'] . '" class="profilepicture">';
+            echo '<img src="/dynamische-applicatie/Data/Game/Avatars/' . $character['avatar'] . '" class="profilepicture" alt="' . $character['avatar'] . '">';
             echo '<ul class="profilestats">';
             echo '<li class="profilestat">Health: ' . $character['health'] . '</li>';
             echo '<li class="profilestat">Attack: ' . $character['attack'] . '</li>';
             echo '<li class="profilestat">Defense: ' . $character['defense'] . '</li>';
             echo '</ul>';
             echo '</div></a>';
-            // print_r($character['name']);
         }
     ?>
 </div>

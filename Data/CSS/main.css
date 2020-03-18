@@ -4,6 +4,7 @@
     color: #FFFFFF;
     font-size: 16px;
     text-align: center;
+    font-family: monospace;
 }
 h1 {
     font-size: 40px;
@@ -30,6 +31,9 @@ li {
 }
 a {
     text-decoration: none;
+}
+a:hover>div {
+    border-color: #FF0000;
 }
 
 
