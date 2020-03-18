@@ -34,7 +34,7 @@ li {
     /* border: 1px solid #313131; */
     display: inline-block;
     border: 1px solid #515151;
-    margin: 0.5rem 0.5rem;
+    margin: 0.5rem;
     padding: 0.5rem;
 }
 
@@ -58,15 +58,15 @@ li {
     text-align: left;
 }
 
-.siz-1 {width: 10%;}
-.siz-2 {width: 20%;}
-.siz-3 {width: 25%;}
-.siz-4 {width: 30%;}
-.siz-5 {width: 40%;}
-.siz-6 {width: 50%;}
-.siz-7 {width: 60%;}
-.siz-8 {width: 70%;}
-.siz-9 {width: 75%;}
-.siz-10 {width: 80%;}
-.siz-11 {width: 90%;}
-.siz-12 {width: 100%;}
+.siz-1 {width: calc(10% - 1rem);}
+.siz-2 {width: calc(20% - 1rem);}
+.siz-3 {width: calc(25% - 1rem);}
+.siz-4 {width: calc(30% - 1rem);}
+.siz-5 {width: calc(40% - 1rem);}
+.siz-6 {width: calc(50% - 1rem);}
+.siz-7 {width: calc(60% - 1rem);}
+.siz-8 {width: calc(70% - 1rem);}
+.siz-9 {width: calc(75% - 1rem);}
+.siz-10 {width: calc(80% - 1rem);}
+.siz-11 {width: calc(90% - 1rem);}
+.siz-12 {width: calc(100% - 1rem);}

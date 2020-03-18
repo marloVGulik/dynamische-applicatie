@@ -18,7 +18,7 @@ require("./Data/HTML/headerP2.html");
         // print_r($result);
         
         foreach ($result as $character) {
-            echo '<a href="character.php/?name=' . urlencode($character['name']) . '"><div class="container siz-5" style="border-color: ' . $character['color'] . '">';
+            echo '<a href="character.php/?name=' . urlencode($character['name']) . '"><div class="container siz-6" style="border-color: ' . $character['color'] . '">';
             echo '<h2>' . $character['name'] . '</h2>';
             echo '<img src="/dynamische-applicatie/Data/Game/Avatars/' . $character['avatar'] . '" class="profilepicture">';
             echo '<ul class="profilestats">';
