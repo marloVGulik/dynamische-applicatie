@@ -16,16 +16,17 @@ require("./Data/HTML/headerP2.html");
         $statement->execute();
         $result = $statement->fetchAll();
         // print_r($result);
+        
         foreach ($result as $character) {
-            echo '<div class="container siz-5">';
+            echo '<a href="character.php/?name=' . urlencode($character['name']) . '"><div class="container siz-5" style="border-color: ' . $character['color'] . '">';
             echo '<h2>' . $character['name'] . '</h2>';
-            echo '<img src="./Data/Game/Avatars/' . $character['avatar'] . '" class="profilepicture">';
+            echo '<img src="/dynamische-applicatie/Data/Game/Avatars/' . $character['avatar'] . '" class="profilepicture">';
             echo '<ul class="profilestats">';
             echo '<li class="profilestat">' . $character['health'] . '</li>';
             echo '<li class="profilestat">' . $character['attack'] . '</li>';
             echo '<li class="profilestat">' . $character['defense'] . '</li>';
             echo '</ul>';
-            echo '</div>';
+            echo '</div></a>';
             // print_r($character['name']);
         }
     ?>
